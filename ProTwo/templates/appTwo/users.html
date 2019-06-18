@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            tyra is here!
+        </title>
+    
+    </head>
+         
+    <body>
+      <h1>Users:</h1>
+      <!--users is the key in the user_dict we created-->
+      {% if users %}
+
+       <ol>
+           {% for person in users %}
+           <li>User Info</li>
+           <ul>
+               <li>{{person.first_name}}</li>
+               <li>{{person.last_name}}</li>
+               <li>{{ person.email }}</li>
+           </ul>
+        </ol>
+           {% endfor %}
+      {% endif %}
+    </body>
+
+</html>
